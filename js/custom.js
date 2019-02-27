@@ -2,10 +2,10 @@
     "use strict"
     var nav_offset_top = $('.header_area').height() + 50;
     /*-------------------------------------------------------------------------------
-	  Navbar 
+	  Navbar
     -------------------------------------------------------------------------------*/
 
-    //* Navbar Fixed  
+    //* Navbar Fixed
     function navbarFixed() {
         if ($('.header_area').length) {
             $(window).scroll(function () {
@@ -28,7 +28,7 @@
     });
 
 
-    //--------  Carousel --------// 
+    //--------  Carousel --------//
     if($('.active-review-carusel').length) {
         $('.active-review-carusel').owlCarousel({
             loop: true,
@@ -60,12 +60,12 @@
     //     items:1,
     //     loop:true,
     //     // autoplay:true,
-    //     autoplayHoverPause: true,        
+    //     autoplayHoverPause: true,
     //     margin:0,
     //     dots: true
     // });
 
-    //------- Mailchimp js --------//  
+    //------- Mailchimp js --------//
 
     function mailChimp() {
         $('#mc_embed_signup').find('form').ajaxChimp();
@@ -80,15 +80,17 @@
     /*----------------------------------------------------*/
     // Partner Map
     if (document.getElementById('mapBox')) {
+        var hospital= {lat:17.361720,lng:78.475170}
         var map = new google.maps.Map(document.getElementById('mapBox'), {
             zoom: 12,
-            center: new google.maps.LatLng(23.81, 90.41),
+            center: hospital,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
         var marker;
         marker = new google.maps.Marker({
-            map: map
+            map: map,
+            position:hospital
         });
     }
 
