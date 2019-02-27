@@ -10,7 +10,7 @@
             e.preventDefault(); // prevent default form submit
 
             $.ajax({
-                url: 'https://github.us20.list-manage.com/subscribe/post?u=7cd6280d46122e7935839d252&amp;id=3cb5508d01', // form action url
+                url: 'mail.php', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
                 data: form.serialize(), // serialize form data
